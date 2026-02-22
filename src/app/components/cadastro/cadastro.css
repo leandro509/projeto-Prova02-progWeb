@@ -1,0 +1,16 @@
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.retornoJSON {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

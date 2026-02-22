@@ -1,0 +1,20 @@
+    
+@for(p of data$ | async; track p.id) {
+<div class="container-card">
+    <div class="card">
+        <div class="card-foto">
+            <img [src]="p.foto" width="50" height="50">
+        </div>
+        <div class="card-info">
+            <p>Nome: {{p.nome}}</p>
+            <br>
+            <p>Propriedade 1: {{p.subobjeto.propriedade1}}</p>
+            <br>
+            <p>Propriedade 2: {{p.subobjeto.propriedade2}}</p>
+        </div>
+        <div class="card-email">
+            <p>Email: {{p.email}}</p>
+        </div>
+    </div>
+</div>
+}

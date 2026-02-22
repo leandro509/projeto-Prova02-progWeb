@@ -1,0 +1,25 @@
+<div class="container-inputs">
+    <p><input id="cadastro_id" type="number" [(ngModel)]="vUserCadastrado.id"></p>
+    <button (click)="buscarUsuario()">Consultar</button>
+    <div class="retornoJSON">
+        <input type="number" [(ngModel)]="vUserCadastrado.id" readonly> <br>
+        <input type="text" [(ngModel)]="vUserCadastrado.nome" readonly> <br>
+        <input type="text" [(ngModel)]="vUserCadastrado.departamento" readonly> <br>
+        <input type="text" [(ngModel)]="vUserCadastrado.endereco" readonly> <br>
+        <input type="text" [(ngModel)]="vUserCadastrado.email" readonly>
+    </div>
+    <div class="retornoExclusao">
+        <div style="text-align: center; margin-top: 5px;">
+            <button (click)="excluiUsuario()">Exclusão</button>
+        </div>
+        <div class="retornoJSON">
+            <p>Status: {{vDeleteStatus.status}}</p>
+            @if (vDeleteStatus.status === "Ok") {
+            <p style="background-color: green;">Mensagem: {{vDeleteStatus.mensagem}}</p>
+            }@else {
+                @if(vDeleteStatus.status === "Erro") {
+                     <p style="background-color: red;">Mensagem: {{vDeleteStatus.mensagem}}</p>
+                }
+            }
+        </div>
+    </div>

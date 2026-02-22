@@ -1,0 +1,12 @@
+h2 {
+    color: black;
+    padding: 10px;
+    font-weight: lighter;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 160px;
+}
