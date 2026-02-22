@@ -19,8 +19,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-                "src/favicon.ico",
-                "src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -85,7 +85,10 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "dir": "dist/app/browser"
+          }
         }
       }
     }
