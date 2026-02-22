@@ -28,6 +28,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/projeto-Prova02-progWeb/",
               "budgets": [
                 {
                   "type": "initial",
@@ -87,7 +88,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "dir": "dist/app/browser"
+            "dir": "dist/app"
           }
         }
       }
