@@ -28,7 +28,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/projeto-Prova02-progWeb/",
+              "baseHref": "/",
               "budgets": [
                 {
                   "type": "initial",
