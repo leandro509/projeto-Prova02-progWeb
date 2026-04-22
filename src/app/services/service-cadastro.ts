@@ -14,7 +14,14 @@ export class ServiceCadastro {
   }
 
   deleteUserCadastrado(pId: number): Observable<void> {
-    return this.vHttpClient.delete<void>('https://jsonplaceholder.typicode.com/albums/' + pId);
+    return this.vHttpClient.delete<void>('https://bu.furb.br/mcardoso/progWeb/apiRestAval.php/cadastro/' + pId);
   }
+
+  updateUserCadastrado(pUserCadastrado: UserCadastrado): Observable<UserCadastrado> {
+    return this.vHttpClient.put<UserCadastrado>('https://bu.furb.br/mcardoso/progWeb/apiRestAval.php/cadastro/' + pUserCadastrado.id, pUserCadastrado);
+  }
+
+  
+  
 
 }

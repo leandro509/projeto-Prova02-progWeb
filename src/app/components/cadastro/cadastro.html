@@ -2,7 +2,7 @@
     <p><input id="cadastro_id" type="number" [(ngModel)]="vUserCadastrado.id"></p>
     <button (click)="buscarUsuario()">Consultar</button>
     <div class="retornoJSON">
-        <input type="number" [(ngModel)]="vUserCadastrado.id" readonly> <br>
+        <input type="number" [(ngModel)] = "primeiroId"  readonly> <br>
         <input type="text" [(ngModel)]="vUserCadastrado.nome" readonly> <br>
         <input type="text" [(ngModel)]="vUserCadastrado.departamento" readonly> <br>
         <input type="text" [(ngModel)]="vUserCadastrado.endereco" readonly> <br>
@@ -17,9 +17,27 @@
             @if (vDeleteStatus.status === "Ok") {
             <p style="background-color: green;">Mensagem: {{vDeleteStatus.mensagem}}</p>
             }@else {
-                @if(vDeleteStatus.status === "Erro") {
-                     <p style="background-color: red;">Mensagem: {{vDeleteStatus.mensagem}}</p>
-                }
+            @if(vDeleteStatus.status === "Erro") {
+            <p style="background-color: red;">Mensagem: {{vDeleteStatus.mensagem}}</p>
+            }
+            }
+        </div>
+    </div>
+    <div class="container-alteraInfo">
+        <div class="alteraInfo">
+            <input type="number" [(ngModel)]="vUserCadastradoEdit.id"> <br>
+            <input type="text" [(ngModel)]="vUserCadastradoEdit.nome"> <br>
+            <input type="text" [(ngModel)]="vUserCadastradoEdit.departamento"> <br>
+            <input type="text" [(ngModel)]="vUserCadastradoEdit.endereco"> <br>
+            <input type="text" [(ngModel)]="vUserCadastradoEdit.email"> <br>
+            <button (click)="alteraUsuario()">Alterar</button>
+            <p>Status: {{vAlteraStatus.status}}</p>
+            @if (vAlteraStatus.status === "Ok") {
+            <p style="background-color: green;">Mensagem: {{vAlteraStatus.mensagem}}</p>
+            }@else {
+            @if(vAlteraStatus.status === "Erro") {
+            <p style="background-color: red;">Mensagem: {{vAlteraStatus.mensagem}}</p>
+            }
             }
         </div>
     </div>

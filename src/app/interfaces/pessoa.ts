@@ -1,6 +1,6 @@
 
 export interface Pessoa {
-    id: number,
+    id?: number,
     nome: String,
     foto: String,
     email: String,
