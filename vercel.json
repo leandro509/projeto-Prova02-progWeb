@@ -1,7 +1,18 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/app",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/app"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
