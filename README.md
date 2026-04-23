@@ -1,59 +1,189 @@
-# App
+# 🚀 Projeto - Programação Web I - Trabalho 2
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+Aplicação web desenvolvida com **Angular** como parte da terceira avaliação da disciplina de **Programação Web I**.
 
-## Development server
+O projeto implementa um sistema de **consulta, exclusão e atualização de cadastro**, consumindo uma API REST externa.
 
-To start a local development server, run:
+---
+
+## 🎬 Demonstração do Projeto
+
+Veja abaixo um vídeo demonstrando o funcionamento da aplicação:
+
+👉 [Clique aqui para assistir ao vídeo](https://youtu.be/JCI-UUYcBhw)
+
+
+## 📌 Funcionalidades
+
+### 🔍 Consulta de Cadastro
+
+* Entrada de um ID numérico
+* Requisição **GET** para a API
+* Exibição dos dados retornados:
+
+  * ID
+  * Nome
+  * Departamento
+  * Endereço
+  * Email
+
+---
+
+### ❌ Exclusão de Cadastro
+
+* Botão **"Exclusão"**
+* Requisição **DELETE** para a API
+* Exibição do resultado:
+
+  * 🟢 Sucesso → fundo verde
+  * 🔴 Erro → fundo vermelho
+
+---
+
+### ✏️ Atualização de Cadastro
+
+* Formulário preenchido automaticamente com os dados consultados
+* Requisição **PUT** para atualização
+* Feedback visual baseado no status da API
+
+---
+
+## 🌐 API utilizada
+
+```bash
+GET    https://bu.furb.br/mcardoso/progWeb/apiRestAval.php/cadastro/{id}
+DELETE https://bu.furb.br/mcardoso/progWeb/apiRestAval.php/cadastro/{id}
+PUT    https://bu.furb.br/mcardoso/progWeb/apiRestAval.php/cadastro/{id}
+```
+
+---
+
+## 🧱 Tecnologias utilizadas
+
+* Angular
+* TypeScript
+* HTML5
+* CSS3
+* API REST
+* Arquitetura baseada em componentes (Angular)
+
+---
+
+## 🧠 Conceitos aplicados
+
+* Consumo de API REST
+* Manipulação de requisições HTTP (GET, PUT, DELETE)
+* Programação assíncrona (Observables)
+* Estruturação de componentes
+* Separação de responsabilidades
+* Feedback visual baseado em resposta da API
+* Responsividade básica
+
+---
+
+## 📁 Estrutura do projeto
+
+```bash
+src/
+ ├── app/
+ │   ├── components/
+ │   │   ├── cadastro/
+ │   │   ├── header/
+ │   │   ├── footer/
+ │   │   └── funcionarios/
+ │   ├── services/
+ │   └── app.routes.ts
+ ├── assets/
+ └── styles.css
+```
+
+---
+
+## ▶️ Como rodar o projeto
+
+### 🔧 Instalar dependências
+
+```bash
+npm install
+```
+
+### ▶️ Rodar em desenvolvimento
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 🏗️ Build para produção
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Arquivos gerados em:
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+dist/app
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## ☁️ Deploy
 
-```bash
-ng e2e
-```
+Projeto publicado na Vercel:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+👉 https://gsp-transportes2.vercel.app/
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## ⚠️ Observações importantes
+
+* A API retorna status **"Ok"** ou **"Erro"** de forma aleatória
+* O sistema trata ambos os casos com feedback visual
+* Projeto desenvolvido com foco acadêmico
+
+---
+
+## 👨‍💻 Autor
+
+Leandro Nascimento
+
+---
+
+## 📚 Contexto acadêmico
+
+Projeto desenvolvido para a disciplina de **Programação Web I**, com os seguintes requisitos:
+
+* CRUD parcial via API REST
+* Interface com HTML semântico
+* Uso de framework frontend
+* Organização de código
+* Responsividade
+
+---
+
+## 💡 Possíveis melhorias futuras
+
+* Validação de formulários
+* Tratamento de erros mais robusto
+* Integração com backend próprio
+* Melhorias de UI/UX
+* Testes automatizados
+
+---
+
+## ⭐ Conclusão
+
+Este projeto demonstra habilidades em:
+
+* Desenvolvimento frontend com Angular
+* Integração com APIs REST
+* Deploy em ambiente real (Vercel)
+* Debug de problemas reais de produção
